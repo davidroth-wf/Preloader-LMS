@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<TITLE>Please Wait...</TITLE>
+    <meta http-equiv="refresh" content="5;url=index_lms.html">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+	/* Styles to make page compliant with Workiva brand guidelines*/
+	.background_color{
+		background-color:#f3f3f3;
+	}
+	BODY {
+		font-family: 'Lato', sans-serif;
+		font-size:16px;
+		color:#113f1e;
+		}
+	.logo{
+		/* Loading Workiva Logo from Okta to speed up page rendering*/
+		background-image:url(https://ok3static.oktacdn.com/bc/image/fileStoreRecord?id=fs0w70fn8kSIIMVUPMTQ);
+		background-repeat:no-repeat;
+	    position:absolute; top:20px; left: 50px; width:100%; height:100%;
+	}
+	 </style>
+    <div id="resizeReference"
+    style="position:absolute; top:0px; left:0px; width:100%; height:100%; z-index::-1">
+    &nbsp;
+    </div>
+</head>
+<BODY class="background_color"><br>
+<div class="logo"></div>
+<br><br><br><br><br><br><br>
+	<center><table width="50%" height="25%" border="1">
+    <tr>
+    	<td style="font-size:16px;" align="center" valign="middle">Please wait for the course to load...</td>
+    </tr>
+    </table>
+    </center>
+	<script>
+	//Script loads style sheet for Lato font to speed up page rendering
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
+</BODY>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<TITLE>Please Wait...</TITLE>
-    <link async href='https://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css'>
+   <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css'> -->
     <meta http-equiv="refresh">
     <style>
 	.background_color{
@@ -10,6 +10,7 @@
 	}
 	BODY {
 		font-family: 'Lato', sans-serif;
+		font-size:16px;
 		color:#113f1e;
 		}
 	.logo{
@@ -32,6 +33,16 @@
     </tr>
     </table>
     </center>
-	
+	<script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css?family=Lato:400,900italic' rel='stylesheet' type='text/css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
 </BODY>
 </html>
